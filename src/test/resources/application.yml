@@ -1,0 +1,16 @@
+server:
+  name: reprocess-config
+  port: 80
+
+spring:
+  profiles:
+    active: test
+  data:
+    mongodb:
+      uri: localhost:27017
+
+
+
+reprocess:
+  config:
+    enabled: true
