@@ -94,7 +94,7 @@ public class ReprocessServiceImpl implements ReprocessService, ApplicationContex
      * @return
      */
     private Object getObjectFromByteStream(byte[] objByteStream) {
-        Object objToReturn = null;
+        Object objToReturn;
         try (ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(objByteStream)) {
             try (ObjectInputStream objectInputStream = new ObjectInputStream(byteArrayInputStream)) {
                 objToReturn = objectInputStream.readObject();
